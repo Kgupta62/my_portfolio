@@ -4,7 +4,7 @@
   }
   @font-face {
     font-family: 'Lucida sans';
-    src: url('./font/lucida-sans/Lucida\ Sans\ Regular.ttf'),
+    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf') format('woff') ,
   }
 *{
     padding: 0;
@@ -69,9 +69,9 @@ html,body{
 }
 #name{
     color: #222227;
-    font-size: 11vh;
+    font-size: 13vh;
     font-family:Lucida sans;
-    margin-top: 2vh;
+    margin-top: 1vh;
     z-index: 99;
     margin-left: 10vw;
     letter-spacing: 5px;
@@ -80,12 +80,12 @@ html,body{
 
 #name2{
     color: #222227;
-    font-size: 11vh;
-    font-family: Lucida sans;
-    margin-top: 2vh;
+    font-size: 12.4vh;
+    font-family: 'Lucida sans';
+    margin-top: 1vh;
     z-index: 99;
     margin-left: 6vw;
-    letter-spacing: 5px;
+    letter-spacing: 1px;
     cursor: pointer;
 }
 
