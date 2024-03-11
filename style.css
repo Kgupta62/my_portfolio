@@ -27,16 +27,20 @@ html,body{
     width: 2.8vw;
     border-radius: 50%;
     margin-left: 2.5vw;
-    margin-right: 16vw;
+    margin-right: 24vw;
 }
 #nav h1{
-        cursor: pointer;
+    cursor: pointer;
     font-size: 25px;
-    
     margin-left: 5vw;
     margin-top: 0.2vw;
     font-family: gilroy;
     font-weight: 300;
+    transition: 0.3s, transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#nav h1:hover {
+    font-weight: 500;
+    transform: scale(1.2);
 }
 #nav button{
     cursor: pointer;
@@ -162,8 +166,8 @@ html,body{
     line-height: 100px;
     font-family: gilroy;
     color: #fff;
-    margin-top: 1vh;
-    letter-spacing: 0.2px;
+    margin-top: 0vh;
+    /* letter-spacing: 0.2px; */
     margin-left: 18.2vh;
     margin-right: 60vh;
 }
@@ -172,7 +176,7 @@ html,body{
     font-weight: 100;
     font-family: gilroy;
     color: #fff;
-    margin-top: 1.2vh;
+    margin-top: 0vh;
     margin-left: 8.9vw;
 }
 #abo button{
@@ -185,8 +189,8 @@ html,body{
     background-color: rgb(244, 243, 238);
     color: #000;
     margin-left: 8vw;
-    margin-top: 13vh;
-    margin-bottom: 20px;
+    margin-top: 10vh;
+    margin-bottom: 30px;
 }
 #side{
     width: 45vw;
@@ -621,6 +625,10 @@ html,body{
     width: 85vw;
     margin-left: 7vw;
     height: 95vh;
+    transition: transform 0.3s ease-in-out;
+}
+#vid2:hover{
+    transform: scale(1.07);
 }
 
 #vidtxt{
