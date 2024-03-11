@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'Gilroy';
     src: url('./font/gilroy/Gilroy-Regular.ttf') format('woff'),
@@ -70,7 +71,7 @@ html,body{
 #name{
     color: #222227;
     font-size: 13vh;
-    font-family:Lucida sans;
+    font-family:'Open Sans', sans-serif;
     margin-top: 1vh;
     z-index: 99;
     margin-left: 10vw;
@@ -81,7 +82,7 @@ html,body{
 #name2{
     color: #222227;
     font-size: 12.4vh;
-    font-family: 'Lucida sans';
+    font-family: 'Open Sans', sans-serif;
     margin-top: 1vh;
     z-index: 99;
     margin-left: 6vw;
