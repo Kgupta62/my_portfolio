@@ -18,8 +18,8 @@ function show() {
   });
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
   ScrollTrigger.refresh();
-
 }
+
 
 show(); //function calling for locomotive js.
 
@@ -123,7 +123,137 @@ document.addEventListener('DOMContentLoaded', function () {
   gsap.from("#nav", { y: -100, opacity: 0, duration: 1, ease: "power2.out" });
 });
 
+gsap.from(".about>h3",{
+  y:20,
+  stagger:0.5,
+  delay:2,
+  //scrub:true
+})
 
+
+var tl = gsap.timeline();
+
+
+tl.from("#line1",{
+ 
+  scrollTrigger:{
+    scroller:"#main",
+   trigger:"#abo",
+   start:"top 50%",
+   end:"top 30%",
+   //markers:true
+  },
+  opacity:0,
+  duration:1,
+  // delay:1,
+  onStart:function(){
+    $('#line1').textillate({ in: { effect: 'fadeInUp' } });
+  }
+},"same")
+tl.from("#skills",{
+  scrollTrigger:{
+    scroller:"#main",
+   trigger:"#abo",
+   start:"top 50%",
+  },
+  opacity:0,
+  duration:1,
+  onStart:function(){
+    $('#skills').textillate({ in: { effect: 'fadeInUp' } });
+  }
+},"same")
+tl.from("#skills2",{
+  scrollTrigger:{
+    scroller:"#main",
+   trigger:"#abo",
+   start:"top 50%",
+  },
+  opacity:0,
+  duration:1,
+  onStart:function(){
+    $('#skills2').textillate({ in: { effect: 'fadeInUp' } });
+  }
+},"same")
+
+
+tl.from("#line2",{
+  scrollTrigger:{
+    scroller:"#main",
+   trigger:"#projects",
+   start:"top 50%",
+  },
+  opacity:0,
+  duration:1,
+  onStart:function(){
+    $('#sline2').textillate({ in: { effect: 'fadeInUp' } });
+  }
+},"same")
+
+
+tl.from("#project",{
+  scrollTrigger:{
+    scroller:"#main",
+   trigger:"#projects",
+   start:"top 50%",
+  },
+  opacity:0,
+  duration:1,
+  onStart:function(){
+    $('#project').textillate({ in: { effect: 'fadeInUp' } });
+  }
+},"same")
+tl.from("#works",{
+  scrollTrigger:{
+    scroller:"#main",
+   trigger:"#projects",
+   start:"top 50%",
+  },
+  opacity:0,
+  duration:1,
+  onStart:function(){
+    $('#works').textillate({ in: { effect: 'fadeInUp' } });
+  }
+},"same")
+
+
+tl.from("#keepin",{
+  scrollTrigger:{
+    scroller:"#main",
+   trigger:"#hey",
+   start:"top 50%",
+  },
+  opacity:0,
+  duration:1,
+  onStart:function(){
+    $('#keepin').textillate({ in: { effect: 'fadeInUp' } });
+  }
+},"same")
+tl.from("#sayhi",{
+  scrollTrigger:{
+    scroller:"#main",
+   trigger:"#hey",
+   start:"top 50%",
+  },
+  opacity:0,
+  duration:1,
+  onStart:function(){
+    $('#sayhi').textillate({ in: { effect: 'fadeInUp' } });
+  }
+},"same")
+// function textillate(){
+//   $(document).ready(function(){
+//     $("#kb1").textillate({
+//       in:{
+//         effect:"fadeInDownBig",
+//         delayScale:3,
+//       },
+//       out:{
+//         effect:"bounceOut",
+//         delayScale:2,
+//       }
+//     })
+//   })
+// }
 
 //animation pixels
 const container = document.querySelector('.container');
@@ -141,7 +271,7 @@ const container = document.querySelector('.container');
         pixel.classList.add('pixel');
         pixel.style.top = `${i * 10}px`;
         pixel.style.left = `${j * 10}px`;
-        pixel.style.backgroundImage = `url('${image.src}')`;
+        pixel.style.backgroundImage = url('${image.src}');
         pixel.style.backgroundSize = `${image.clientWidth}px ${image.clientHeight}px`;
         pixel.style.backgroundPosition = `-${j * 10}px -${i * 10}px`;
         pixels.push({element: pixel, x: 0, y: 0});
@@ -172,7 +302,7 @@ const container = document.querySelector('.container');
       const pixel = pixelData.element;
       const translateX = pixelData.x;
       const translateY = pixelData.y;
-      pixel.style.transform = `translate(${translateX}px, ${translateY}px)`;
+      pixel.style.transform = translate(`${translateX}px, ${translateY}px`);
     });
     requestAnimationFrame(animatePixels);
   }
@@ -200,3 +330,7 @@ const container = document.querySelector('.container');
     animatePixels();
   };
 
+  var momo=document.getElementById("momo");
+  momo.onclick=function(){
+    document.body.classList.toggle("dark-theme");
+  }
